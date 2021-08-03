@@ -12,6 +12,16 @@ perm:
 	sudo chmod -R ug+rwx storage bootstrap/cache
 	sudo chmod -R 777 storage
 
+assets-install:
+	docker-compose exec node yarn install
 
+assets-dev:
+	docker-compose exec node yarn run dev
+
+assets-rebuild:
+	docker-compose exec node npm rebuild node-sass --force
+
+assets-watch:
+	docker-compose exec node yarn run watch
 
 

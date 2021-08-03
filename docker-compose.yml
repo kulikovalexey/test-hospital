@@ -46,3 +46,9 @@ services:
             - "MYSQL_DATABASE=app"
         ports:
             - "33061:3306"
+    node:
+        image: node:16-alpine
+        volumes:
+          - ./:/var/www
+        working_dir: /var/www
+        tty: true
