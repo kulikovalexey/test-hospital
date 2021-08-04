@@ -11,6 +11,7 @@ perm:
 	sudo chgrp -R www-data storage bootstrap/cache
 	sudo chmod -R ug+rwx storage bootstrap/cache
 	sudo chmod -R 777 storage
+	sudo chmod -R 777 /home/alexey/Code/my/test-hospital/database/migrations
 
 assets-install:
 	docker-compose exec node yarn install
@@ -23,5 +24,6 @@ assets-rebuild:
 
 assets-watch:
 	docker-compose exec node yarn run watch
+
 
 
