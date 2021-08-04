@@ -10,8 +10,7 @@ docker-build:
 perm:
 	sudo chgrp -R www-data storage bootstrap/cache
 	sudo chmod -R ug+rwx storage bootstrap/cache
-	sudo chmod -R 777 storage
-	sudo chmod -R 777 /home/alexey/Code/my/test-hospital/database/seeds/users.php
+	sudo chmod -R 777 /home/alexey/Code/my/test-hospital/database/seeds/MedicamentTableSeeder.php
 
 assets-install:
 	docker-compose exec node yarn install
