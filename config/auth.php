@@ -24,7 +24,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | Next, you may define every authentication guard for your application.
-    | Of course, a great default configuration has been defined for you
+    | Of course, a great default configuration has been definedApp\Entity\User; for you
     | here which uses session storage and the Eloquent user provider.
     |
     | All authentication drivers have a user provider. This defines how the
@@ -68,7 +68,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\User::class,
+            'model' => App\Entity\User\User::class,
         ],
 
         // 'users' => [
