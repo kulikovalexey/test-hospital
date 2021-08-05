@@ -7,4 +7,13 @@ RUN wget https://getcomposer.org/installer -O - -q | php -- --version=2.1.5 --in
 
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
+# Add user for laravel application
+RUN groupadd -g 1000 www
+RUN useradd -u 1000 -ms /bin/bash -g www www
+
+COPY --chown=www:www . /var/www
+
+# Change current user to www
+USER www
+
 WORKDIR /var/www
