@@ -17,22 +17,6 @@
     <form action="{{ $register_url }}" method="post">
         {{ csrf_field() }}
 
-        {{--Login field --}}
-        <div class="input-group mb-3">
-            <input type="text" name="login" class="form-control {{ $errors->has('login') ? 'is-invalid' : '' }}"
-                   value="{{ old('login') }}" placeholder="{{ __('adminlte::adminlte.login') }}" autofocus>
-            <div class="input-group-append">
-                <div class="input-group-text">
-                    <span class="fas fa-user {{ config('adminlte.classes_auth_icon', '') }}"></span>
-                </div>
-            </div>
-            @if($errors->has('login'))
-                <div class="invalid-feedback">
-                    <strong>{{ $errors->first('login') }}</strong>
-                </div>
-            @endif
-        </div>
-
         {{-- Email field --}}
         <div class="input-group mb-3">
             <input type="email" name="email" class="form-control {{ $errors->has('email') ? 'is-invalid' : '' }}"

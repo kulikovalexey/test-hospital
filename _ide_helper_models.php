@@ -27,6 +27,7 @@ namespace App\Entity\Medicament{
  * @method static \Illuminate\Database\Eloquent\Builder|Medicament whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Medicament whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Medicament whereUpdatedAt($value)
+ * @mixin \Eloquent
  */
 	class Medicament extends \Eloquent {}
 }
@@ -70,6 +71,7 @@ namespace App\Entity\User{
  * @method static \Illuminate\Database\Eloquent\Builder|User whereStatus($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereVerifyToken($value)
+ * @mixin \Eloquent
  */
 	class User extends \Eloquent {}
 }
