@@ -20,6 +20,7 @@ services:
             - ./:/var/www
         links:
             - mysql
+            - mail
         environment:
             - "DB_PORT=3306"
             - "DB_HOST=mysql"
@@ -31,6 +32,7 @@ services:
             - ./:/var/www
         links:
             - mysql
+            - mail
         environment:
             - "DB_PORT=3306"
             - "DB_HOST=mysql"
@@ -52,3 +54,10 @@ services:
           - ./:/var/www
         working_dir: /var/www
         tty: true
+    mail:
+        image: mailhog/mailhog
+        logging:
+            driver: 'none'  # disable saving logs
+        ports:
+            - 1025:1025 # smtp server
+            - 8025:8025 # web ui
